@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		<bean id="userDao" class="com.me.dao.UserDao"></bean>
+		<bean id="notesDao" class="com.me.dao.NotesDao"></bean>
+		<bean id="paymentDao" class="com.me.dao.PaymentDao"></bean>
+		<bean id="shareDao" class="com.me.dao.ShareDao"></bean>
+		<bean id="userValidator" class="com.me.validator.UserValidator"></bean>	
+</beans>

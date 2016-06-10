@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 18, 2015 7:51:18 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.me.model.User" table="USER">
+        <id name="userid" type="java.lang.Integer">
+            <column name="USERID" />
+            <generator class="native" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>
+        <property name="gender" type="java.lang.String">
+           <column name="GENDER"></column>
+        </property>
+        <property name="age" type="java.lang.Integer">
+           <column name="AGE"></column>
+        </property>
+        <property name="university" type= "java.lang.String">
+           <column name="university">
+             </column>
+        </property>
+        <set name="notesList" table="NOTES" inverse="true" lazy="true" fetch="select">
+	<key>
+		<column name="USERID"></column>
+	</key>
+	<one-to-many class="com.me.model.Notes"></one-to-many>
+</set>
+ <set name="shareList" table="SHARE" inverse="true" lazy="true" fetch="select">
+	<key>
+		<column name="USERID"></column>
+	</key>
+	<one-to-many class="com.me.model.Share"></one-to-many>
+</set>
+
+    </class>
+</hibernate-mapping>

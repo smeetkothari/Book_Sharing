@@ -1,0 +1,92 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+		<link rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+		<!--webfonts-->
+		<link href='http://fonts.googleapis.com/css?family=Lobster|Pacifico:400,700,300|Roboto:400,100,100italic,300,300italic,400italic,500italic,500' ' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,500,600,700,300' rel='stylesheet' type='text/css'>
+		<!--webfonts-->
+<title>Insert title here</title>
+<style type = "text/css">
+/****** IGNORE ******/
+body { 
+  width: 400px; 
+  margin: 100px auto; 
+  background: #eee url('http://i.imgur.com/eeQeRmk.png');; 
+}
+
+.copyright {
+  display:block;
+  margin-top: 100px;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.copyright a{
+  text-decoration: none;
+  color: #EE4E44;
+}
+
+
+/****** CODE ******/
+
+.file-upload{display:block;text-align:center;font-family: Helvetica, Arial, sans-serif;font-size: 12px;}
+.file-upload .file-select{display:block;border: 2px solid #dce4ec;color: #34495e;cursor:pointer;height:40px;line-height:40px;text-align:left;background:#FFFFFF;overflow:hidden;position:relative;}
+.file-upload .file-select .file-select-button{background:#dce4ec;padding:0 10px;display:inline-block;height:40px;line-height:40px;}
+.file-upload .file-select .file-select-name{line-height:40px;display:inline-block;padding:0 10px;}
+.file-upload .file-select:hover{border-color:#34495e;transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;}
+.file-upload .file-select:hover .file-select-button{background:#34495e;color:#FFFFFF;transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;}
+.file-upload.active .file-select{border-color:#3fa46a;transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;}
+.file-upload.active .file-select .file-select-button{background:#3fa46a;color:#FFFFFF;transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;}
+.file-upload .file-select input[type=file]{z-index:100;cursor:pointer;position:absolute;height:100%;width:100%;top:0;left:0;opacity:0;filter:alpha(opacity=0);}
+.file-upload .file-select.file-select-disabled{opacity:0.65;}
+.file-upload .file-select.file-select-disabled:hover{cursor:default;display:block;border: 2px solid #dce4ec;color: #34495e;cursor:pointer;height:40px;line-height:40px;margin-top:5px;text-align:left;background:#FFFFFF;overflow:hidden;position:relative;}
+.file-upload .file-select.file-select-disabled:hover .file-select-button{background:#dce4ec;color:#666666;padding:0 10px;display:inline-block;height:40px;line-height:40px;}
+.file-upload .file-select.file-select-disabled:hover .file-select-name{line-height:40px;display:inline-block;padding:0 10px;}
+.button input[type="submit"] {
+		width: 52%;
+		padding: 10px;
+		color: #000;
+		font-size: 20px;
+		margin: 10px;
+		
+	}
+</style>
+</head>
+<body>
+<h1>File Uploading</h1>
+
+<form method="POST" action="uploadFile" enctype="multipart/form-data">
+<div class="file-upload">
+  <div class="file-select">
+    <div class="file-select-button" id="fileName">Choose File</div>
+    <div class="file-select-name" id="noFile">No file chosen...</div> 
+    <input type="file" name="file" id="chooseFile">
+	
+  </div>
+  
+</div>
+
+		<br><br>
+		Name:<input type="text" name="name" required><br /> <br /> 
+		Subject: <input type="text" name="b" required><br /> <br /> 
+		No. of Pages: <input type="text" name="c" required><br /> <br /> 
+		Amount: <input type="text" name="d" required><br /> <br /> 
+		Description: <input type="text" name="e" required><br /> <br /> 
+		
+		<div class = "button">
+<input type="submit" value="Upload" id= "upload"  >
+</div>
+	</form>
+	
+	
+	
+</body>
+</html>

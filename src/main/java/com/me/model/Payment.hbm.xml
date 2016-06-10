@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 18, 2015 7:51:18 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.me.model.Payment" table="PAYMENT">
+        <id name="pay_id" type="java.lang.Integer">
+            <column name="PAYID" />
+            <generator class="native" />
+        </id>
+        <property name="sender" type="java.lang.Integer">
+            <column name="sender" />
+        </property>
+       <property name="receiver" type="java.lang.Integer">
+            <column name="receiver" />
+        </property>
+		<property name="amount" type="java.lang.Integer">
+            <column name="amount" />
+        </property>
+	
+        <property name="card_number" type="java.lang.String">
+           <column name="card_number"></column>
+        </property>
+       <property name="expiry" type="java.lang.String">
+           <column name="expiry"></column>
+        </property>
+         <property name="cvv" type="java.lang.String">
+           <column name="cvv"></column>
+        </property>
+         <property name="name_on_card" type="java.lang.String">
+           <column name="name_on_card"></column>
+        </property>
+       <one-to-one name="share" class="com.me.model.Share"
+			></one-to-one>
+    </class>
+</hibernate-mapping>
